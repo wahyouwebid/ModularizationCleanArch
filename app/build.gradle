@@ -1,0 +1,61 @@
+import dependencies.Dependencies
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.wahyouwebid.beritaku'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.wahyouwebid.beritaku"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(":modules:news")
+    implementation project(":core")
+
+    implementation Dependencies.ANDROIDX_CORE
+    implementation Dependencies.ANDROIDX_APPCOMPAT
+    implementation Dependencies.MATERIAL
+    implementation Dependencies.ANDROIDX_CONSTRAINT_LAYOUT
+    implementation Dependencies.NAVIGATION_FRAGMENT
+    implementation Dependencies.NAVIGATION_UI
+
+    implementation Dependencies.LOTTIE
+    implementation Dependencies.HILT
+    implementation Dependencies.ROOM
+
+    testImplementation Dependencies.JUNIT
+    androidTestImplementation Dependencies.ANDROIDX_JUNIT
+    androidTestImplementation Dependencies.ESPRESSO
+
+    kapt Dependencies.HILT_COMPILER
+    kapt Dependencies.ANDROIDX_HILT_COMPILER
+    kapt Dependencies.ROOM_COMPILER
+}

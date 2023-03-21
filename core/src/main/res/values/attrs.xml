@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="ToolbarView">
+        <attr name="showNavigate" format="boolean" />
+    </declare-styleable>
+</resources>

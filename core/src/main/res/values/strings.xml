@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_content_description">Content Description</string>
+    <string name="title_news_detail">Detail News</string>
+    <string name="app_name">BeritaKu</string>
+</resources>

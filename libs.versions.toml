@@ -1,0 +1,11 @@
+[versions]
+kotlin = "1.6.21"
+coroutines = "1.6.1"
+kaHelpers = "3.4.0"
+gradlePlugins-agp = "7.2.0"
+
+
+[libraries]
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kahelpers-toaster = { module = "com.github.FunkyMuse.KAHelpers:toaster", version.ref = "kaHelpers" }
