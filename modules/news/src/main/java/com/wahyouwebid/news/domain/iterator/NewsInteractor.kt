@@ -8,7 +8,7 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
-class NewsIterator @Inject constructor(
+class NewsInteractor @Inject constructor(
     private val repository: NewsRepository,
     private val compositeDisposable: CompositeDisposable
 ) : NewsUseCase {

@@ -3,7 +3,7 @@ package com.wahyouwebid.news.di
 import com.wahyouwebid.core.database.Sessions
 import com.wahyouwebid.news.data.network.NewsApiService
 import com.wahyouwebid.news.data.repository.NewsDataRepository
-import com.wahyouwebid.news.domain.iterator.NewsIterator
+import com.wahyouwebid.news.domain.iterator.NewsInteractor
 import com.wahyouwebid.news.domain.usecase.NewsUseCase
 import com.wahyouwebid.news.domain.repository.NewsRepository
 import dagger.Module
@@ -35,7 +35,7 @@ object NewsModule {
         newsRepository: NewsRepository,
         compositeDisposable: CompositeDisposable
     ): NewsUseCase {
-        return NewsIterator(newsRepository, compositeDisposable)
+        return NewsInteractor(newsRepository, compositeDisposable)
     }
 
     @Provides

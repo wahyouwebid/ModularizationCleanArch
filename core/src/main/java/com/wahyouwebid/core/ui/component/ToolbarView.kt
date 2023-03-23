@@ -22,11 +22,7 @@ class ToolbarView(
 
     init {
         attributeSet?.let {
-            context.theme.obtainStyledAttributes(
-                it,
-                R.styleable.ToolbarView,
-                0,
-                0
+            context.theme.obtainStyledAttributes(it, R.styleable.ToolbarView, 0, 0
             ).apply {
                 try {
                     showNavigate = getBoolean(R.styleable.ToolbarView_showNavigate, false)
